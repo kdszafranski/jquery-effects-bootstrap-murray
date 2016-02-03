@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	var img = '<img class="murray" src="http://www.fillmurray.com/250/250" />';
 
 	// Event Listeners
 	$('#fade-out').on('click', function() {
@@ -16,12 +15,16 @@ $(document).ready(function() {
 	});
 
 	$('#add-button').on('click', function() {
+		var size = randomNumber(200, 500);
+		var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
+		console.log(img);
+
 		$('#murray-box').append(img);
 	});
 
 });
 
 
-function randomNumber() {
-
+function randomNumber(min, max){
+	return Math.floor(Math.random() * (1 + max - min) + min);
 }
