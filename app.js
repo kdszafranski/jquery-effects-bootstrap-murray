@@ -14,7 +14,7 @@ $(document).ready(function() {
 	});
 
 	$('#remove-button').on('click', function() {
-		// removes ALL my murrays from the page
+		// removes ALL murrays from the page
 		$('.murray').remove();
 	});
 
