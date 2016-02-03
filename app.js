@@ -9,6 +9,10 @@ $(document).ready(function() {
 		$('.murray').fadeIn(500);
 	});
 
+	$('#fade-out-in').on('click', function() {
+		$('.murray').fadeOut(500).fadeIn(250);
+	});
+
 	$('#remove-button').on('click', function() {
 		// removes ALL my murrays from the page
 		$('.murray').remove();
@@ -17,8 +21,6 @@ $(document).ready(function() {
 	$('#add-button').on('click', function() {
 		var size = randomNumber(200, 500);
 		var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
-		console.log(img);
-
 		$('#murray-box').append(img);
 	});
 
