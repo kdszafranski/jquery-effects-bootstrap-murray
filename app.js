@@ -28,6 +28,11 @@ $(document).ready(function() {
 		$('.murray').remove();
 	});
 
+	// using relative speeds for arguments
+	$('#slide-with-delay').on('click', function() {
+		$('.murray').slideUp("fast").delay("slow").slideDown("fast");
+	});
+
 	$('#add-button').on('click', function() {
 		var size = randomNumber(200, 500);
 		var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
