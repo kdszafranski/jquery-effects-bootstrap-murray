@@ -27,6 +27,10 @@ $(document).ready(function() {
 		// removes ALL murrays from the page
 		$('.murray').remove();
 	});
+	
+	$('#toggle-slide').on('click', function() {
+	    $('.murray').slideToggle();
+	});
 
 	// using relative speeds for arguments
 	$('#slide-with-delay').on('click', function() {
