@@ -42,7 +42,6 @@ $(document).ready(function() {
 		var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
 		$('#murray-box').append(img);
 		$('#murray-box').children().last().data('id', counter);
-		console.log(counter);
 		counter++;
 	});
 
