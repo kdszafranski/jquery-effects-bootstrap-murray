@@ -5,6 +5,8 @@ Lecture notes for working with jQuery event listeners, Bootstrap grid layout, jQ
 ## Selecting Murrays
 Includes logic to allow the user to click on a murray image and select it. This demonstrates how we would store data on each image element in the DOM and use it to set a 'selected' and therefore track multiple values with .data().
 
+This could then be used to target a specific image to use effects on.
+
     function selectMurray() {
     	var selected = $(this).data('id');
 
