@@ -46,10 +46,14 @@ $(document).ready(function() {
 
 });
 
+function randomNumber(min, max){
+	return Math.floor(Math.random() * (1 + max - min) + min);
+}
+
 function selectMurray() {
 	var selected = $(this).data('id');
 	console.log(selected);
-	
+
 	$('.murray').each(function(i) {
 		var id = $(this).data('id');
 		if(id == selected) {
@@ -61,9 +65,4 @@ function selectMurray() {
 		}
 		console.log($(this).data());
 	});
-}
-
-
-function randomNumber(min, max){
-	return Math.floor(Math.random() * (1 + max - min) + min);
 }
