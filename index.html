@@ -3,60 +3,50 @@
 	<head>
 	 	<meta charset="utf-8">
 	    <title>Event Logic with Bill Murray</title>
-	    <!-- Bootstrap: Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-		<link rel="stylesheet" href="style.css" />
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="bootstrap.min.css" />
+      <link rel="stylesheet" href="style.css" />
 
-		<script type="text/javascript" src="jquery.min.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-  	</head>
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
 
+	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="jumbotron text-center">
-					<h1>My Murrays</h1>
-				</div>
-			</div>
-	  		<div class="row">
-	  			<div class="col-md-2">
-	  				<h2>Effects</h2>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="fade-out">Fade Out</button>
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="fade-in">Fade In</button>
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="fade-out-in">Fade Out/In</button>
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="slide-up">Slide Up (Hide)</button>		
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="slide-down">Slide Down (Show)</button>		
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="slide-with-delay">Slide with Delay</button>		
-  					</div>
-  					<div class="form-group">
-  						<button class="btn btn-default" id="toggle-slide">Toggle Slide</button>
-  					</div>
-	  			</div>
-	  			<div class="col-md-8 text-center" id="murray-box">
-	  			</div>
-	  			<div class="col-md-2">
-	  				<h2>Append/Remove</h2>
-	  				<div class="form-group">
-  						<button class="btn btn-default" id="remove-button">Remove Murray</button>
-  					</div>
-	  				<div class="form-group">
-  						<button class="btn btn-default" id="add-button">Add Murray</button>
-  					</div>	  				
-	  			</div>
-	  			
-	  		</div>
-  		</div>
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron text-center">
+          <h1>My Murrays</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <h2>Effects</h2>
+          <div class="form-group">
+            <button class="btn btn-default" id="fade-out">Fade Out</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" id="fade-in">Fade In</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" id="fade-toggle">Fade Toggle</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" id="slide-combo">Slide Combo</button>
+          </div>
+        </div>
+        <div class="col-md-8 text-center" id="murray-box"></div>
+        <div class="col-md-2">
+          <h2>Add/Remove</h2>
+          <div class="form-group">
+            <button class="btn btn-default" id="add-button">Add Murray</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" id="remove-button">Remove Murray</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 	</body>
 
 </html>
