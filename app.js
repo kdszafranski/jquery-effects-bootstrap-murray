@@ -12,13 +12,11 @@ $(document).ready(function() {
     $('.murray').fadeToggle(500);
   });
 
-  $('.murray').on('click', function() {
-    // $(this).addClass('spin-animation');
-    console.log('img:', $(this));
-    // $(this).animate({
-    //     height: '10px',
-    //     width: '10px'
-    //   }, 500);
+  $('#murray-box').on('click', '.murray', function() {
+    $(this).animate({
+        height: '-=50px',
+        width: '-=50px'
+      }, 500);
   });
 
   $('#slide-combo').on('click', function() {
