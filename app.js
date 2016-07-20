@@ -13,7 +13,12 @@ $(document).ready(function() {
   });
 
   $('.murray').on('click', function() {
-    $(this).addClass('spin-animation');
+    // $(this).addClass('spin-animation');
+    console.log('img:', $(this));
+    // $(this).animate({
+    //     height: '10px',
+    //     width: '10px'
+    //   }, 500);
   });
 
   $('#slide-combo').on('click', function() {
@@ -27,7 +32,6 @@ $(document).ready(function() {
   $('#add-button').on('click', function() {
     var size = randomNumber(200, 500);
     var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />'
-    console.log(img);
     $('#murray-box').append(img);
   });
 
