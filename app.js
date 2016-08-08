@@ -12,13 +12,6 @@ $(document).ready(function() {
     $('.murray').fadeToggle(500);
   });
 
-  $('#murray-box').on('click', '.murray', function() {
-    $(this).animate({
-        height: '-=50px',
-        width: '-=50px'
-      }, 500);
-  });
-
   $('#slide-combo').on('click', function() {
     $('.murray').slideUp('fast').delay(1000).slideDown('slow');
   });
@@ -26,6 +19,21 @@ $(document).ready(function() {
   $('#remove-button').on('click', function() {
     $('.murray').remove();
   });
+
+  // Animations!
+  // ad-hoc with .animate
+  $('#murray-box').on('click', '.murray', function() {
+    $(this).animate({
+        height: '-=50px',
+        width: '-=50px'
+      }, 500);
+  });
+
+  // Use pre-defined CSS animations by applying a class
+  $('#murray-box').on('click', '.murray', function() {
+    $(this).toggleClass("animate-murray");
+  });
+
 
   $('#add-button').on('click', function() {
     var size = randomNumber(200, 500);
