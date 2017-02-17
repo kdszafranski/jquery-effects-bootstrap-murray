@@ -20,24 +20,25 @@ $(document).ready(function() {
   });
 
   // ad-hoc animation with .animate()
-  $("#murray-box").on("click", ".murray", function() {
-    $(this).animate({
-      height: '-=50px',
-      width: '-=50px'
-    }, 500)
-    .delay(500)
-    .animate({
-      height: '+=50px',
-      width: '+=50px'
-    }, 'fast');
-  });
+  // $("#murray-box").on("click", ".murray", function() {
+  //   $(this).animate({
+  //     height: '-=50px',
+  //     width: '-=50px'
+  //   }, 500)
+  //   .delay(500)
+  //   .animate({
+  //     height: '+=50px',
+  //     width: '+=50px'
+  //   }, 'fast');
+  // });
 
-  // Use pre-defined CSS class to apply animation effects
+  // Use pre-defined CSS class to apply animation effects, See CSS file for definition
   $("#murray-box").on("click", ".murray", function() {
     // if($(this).hasClass("spin-murray"))
     $(this).toggleClass("spin-murray");
   });
 
+  // Get a new fill murray picture and put it on the DOM
 	$("#add-murray").on("click", function() {
     var size = randomNumber(150, 400);
     var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
