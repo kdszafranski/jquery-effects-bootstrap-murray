@@ -1,4 +1,11 @@
-$(document).ready(function() {
+$(document).ready(readyNow);
+
+function readyNow() {
+  console.log('DOM is loaded');
+  
+  // Get a new fill murray picture and put it on the DOM
+	$("#add-murray").on("click", addMurray);
+
   // effects
   $("#fade-out").on("click", function() {
     $(".murray").slideUp(500).delay(1000).slideDown('slow');
@@ -19,6 +26,11 @@ $(document).ready(function() {
     $(".murray").slideUp('fast').delay(1000). slideDown('slow');
   });
 
+  // Use pre-defined CSS class to apply animation effects, See CSS file for definition
+  $("#murray-box").on("click", ".murray", function() {
+    $(this).toggleClass("spin-murray");
+  });
+
   // ad-hoc animation with .animate()
   // $("#murray-box").on("click", ".murray", function() {
   //   $(this).animate({
@@ -32,21 +44,21 @@ $(document).ready(function() {
   //   }, 'fast');
   // });
 
-  // Use pre-defined CSS class to apply animation effects, See CSS file for definition
-  $("#murray-box").on("click", ".murray", function() {
-    // if($(this).hasClass("spin-murray"))
-    $(this).toggleClass("spin-murray");
-  });
+}
 
-  // Get a new fill murray picture and put it on the DOM
-	$("#add-murray").on("click", function() {
-    var size = randomNumber(150, 400);
-    var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
-    $("#murray-box").append(img);
-  });
+// Adds a bill murray image to the DOM
+function addMurray() {
+  var size = randomNumber(100, 400);
+  var $img = $('<img>',
+              {
+                'src': 'http://www.fillmurray.com/' + size + '/' + size,
+                'class': 'murray'
+              });
 
-});
+  $("#murray-box").append($img);
+}
 
+// Returns a number between min and max (includ)
 function randomNumber(min, max){
 	return Math.floor(Math.random() * (1 + max - min) + min);
 }
