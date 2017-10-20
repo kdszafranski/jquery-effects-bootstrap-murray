@@ -13,8 +13,3 @@
       transform:rotate(360deg);
     }
 }
-
-.selected {
-	border: 2px solid black;
-	opacity: 0.75;
-}
