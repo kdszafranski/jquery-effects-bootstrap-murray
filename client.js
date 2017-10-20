@@ -9,7 +9,7 @@ function readyNow() {
 
 }
 
-// Returns a number between min and max (includ)
+// Returns a number between min and max (inclusive)
 function randomNumber(min, max){
 	return Math.floor(Math.random() * (1 + max - min) + min);
 }
